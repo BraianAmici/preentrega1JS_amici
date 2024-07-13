@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Seguros</title>
+</head>
+<body>
+    <h1>Cotizador de Seguros</h1>
+    <form id="cotizadorForm">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" required />
+
+        <label for="type">Tipo de Seguro:</label>
+        <select id="type" required>
+            <option value="auto">Auto</option>
+            <option value="hogar">Hogar</option>
+            <option value="vida">Vida</option>
+        </select>
+
+        <div id="extraAuto" class="extra-input">
+            <label for="marcaModelo">Marca y Modelo del Automóvil:</label>
+            <input type="text" id="marcaModelo" />
+        </div>
+
+        <div id="extraHogar" class="extra-input">
+            <label for="tipoVivienda">Tipo de Vivienda:</label>
+            <select id="tipoVivienda">
+                <option value="Otros">Ninguna</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="casa">Casa</option>
+                <option value="duplex">Dúplex</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="cotizarSeguro()">Cotizar</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <p id="result"></p>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
